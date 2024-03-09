@@ -9,7 +9,7 @@ const BigWords: FC = () => {
     <section className={`px-7 py-[450px] overflow-hidden`} >
       {
         words.map((word: string, index: number)=> (
-          <div>
+          <div key={index}>
             <WordTag index={index} word={word} />
           </div>
          ))

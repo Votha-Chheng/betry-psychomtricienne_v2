@@ -38,7 +38,7 @@ const WordTag: FC<WordTagProps> = ({word, index}) => {
 
   const translation = useMemo(()=> {
     return getPercentage(Y, positionY, index%2 === 0 ? true: false )
-  }, [positionY, Y])
+  }, [positionY, Y, index])
   
   return (
     <div  
