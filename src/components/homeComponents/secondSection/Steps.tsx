@@ -58,7 +58,7 @@ const Steps: FC<StepsProps> = ({setSecondInView, bgColor}) => {
           inView && setAsideInView(true)
           setSecondInView(inView)
         }}
-        style={{height: "100%", overflow:"hidden"}}
+        style={{height: "100%"}}
       >
         <aside ref={asideRef} className='flex justify-center mt-24'>
           <div className='hidden sm:flex relative w-44 lg:w-[660px]  flex-col items-center'>

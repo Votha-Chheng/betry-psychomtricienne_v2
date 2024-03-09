@@ -1,5 +1,6 @@
 import { inter } from '@/fonts/inter'
 import { useScrollY } from '@/hooks/useScrollTop'
+import { useMediaQuery, useWindowSize } from '@uidotdev/usehooks'
 import React, { FC, useEffect, useMemo, useRef, useState } from 'react'
 
 type WordTagProps = {
@@ -9,9 +10,12 @@ type WordTagProps = {
 
 const WordTag: FC<WordTagProps> = ({word, index}) => {
   const [positionY, setPositionY] = useState<number>(0)
+  const [screenHeight, setScreenHeight] = useState<number>(0)
 
   const wordRef = useRef<HTMLDivElement>(null)
   const Y = useScrollY()
+  const {height} = useWindowSize()
+  const isSmallDevice = useMediaQuery("only screen and (max-width:500px)")
 
   useEffect(()=> {
     if(wordRef.current){
@@ -19,6 +23,11 @@ const WordTag: FC<WordTagProps> = ({word, index}) => {
     }
   }, [])
 
+  useEffect(()=> {
+    if(height){
+      isSmallDevice ? setScreenHeight(height) : setScreenHeight(height/2)
+    }
+  }, [height])
 
   const getPercentage = (scrollY: number, positionY: number, left : boolean)=> {
     let scrolledElement = scrollY-(positionY)
@@ -26,10 +35,10 @@ const WordTag: FC<WordTagProps> = ({word, index}) => {
     if(scrolledElement<0){
       return left ? -100 : 100
 
-    } else if((scrolledElement>0) && (scrolledElement < 500)){
-      return left? -((500-scrolledElement)/500)*100 : ((500 - scrolledElement)/500)*100
+    } else if((scrolledElement>0) && (scrolledElement < screenHeight)){
+      return left? -((screenHeight-scrolledElement)/screenHeight)*100 : ((screenHeight - scrolledElement)/screenHeight)*100
 
-    } else if((scrolledElement >500)){
+    } else if((scrolledElement >screenHeight)){
       return 0
     }
     

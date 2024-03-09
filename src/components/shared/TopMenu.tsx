@@ -51,7 +51,7 @@ const TopMenu: FC<TopMenuProps> = ({bgColor}) => {
               <Link href="/">Estelle Bétry</Link>
               :
               <div className='w-[50px] h-[50px] relative rounded-full overflow-hidden'>
-                <Link href="/"><Image alt="portrait de Estelle Bétry, psychomotricienne" src="/images/IMG_20210422_0017.jpg" fill style={{objectFit: 'cover'}}/></Link>
+                <Link href="/"><Image alt="portrait de Estelle Bétry, psychomotricienne" src="https://zupimages.net/up/24/10/hdau.jpg" fill style={{objectFit: 'cover'}}/></Link>
               </div>
             }
             
