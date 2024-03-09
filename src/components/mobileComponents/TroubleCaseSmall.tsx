@@ -35,28 +35,19 @@ const TroubleCaseSmall: FC<TroubleCaseSmallProps> = ({image, alt, children, titl
   }, [])
 
   return (
+
     <motion.div 
       ref={containerRef} 
-      style={{height:`${containerHeight + 100}px`}} 
       variants={appearOpacity} 
       initial="initial" animate={inview ? "animate":""} 
       className='relative w-full overflow-hidden border-4 border-anti-flash-white'
+      style={{backgroundImage:`url('/images/${image}')`}}
     >
-      <InView triggerOnce={true} onChange={(inView, entry)=> setInview(inView)} />
-      <Image 
-        src={`/images/${image}`} 
-        alt={alt} 
-        style={{objectFit:"cover"}} 
-        className='brightness-125'
-        fill
-      />
-      <div style={{height:`${containerHeight+100}px`}} className='absolute w-screen top-0 bg-white opacity-70' />
-      <div style={{width: `${containerWidth}px`, height:`${containerHeight+100}px`}} className='absolute top-0 p-5'>
-        <div ref={textRef}>
-          <h3 className={`${bgColorTitle} mb-7 text-xl sm:text-2xl text-center tracking-wide text-anti-flash-white font-bold p-2.5`}>{title}</h3>
-          <div>
-            {children}
-          </div>
+      <div style={{backgroundColor: "rgba(255,255,255,0.8)"}}>
+        <InView triggerOnce={true} onChange={(inView, entry)=> setInview(inView)} />
+        <h3 className={`${bgColorTitle} static mb-7 text-xl sm:text-2xl text-center tracking-wide text-anti-flash-white font-bold p-2.5`}>{title}</h3>
+        <div className='px-5 pb-5'>
+          {children}
         </div>
       </div>
     </motion.div>

@@ -4,7 +4,6 @@ import PsychomotriciteScreen from './PsychomotriciteScreen'
 const PsychomotricitePage: FC = () => {
   return (
     <>
-
       <PsychomotriciteScreen/>
     </>
   )
