@@ -63,11 +63,13 @@ const AteliersScreen: FC = () => {
             <div className='overflow-hidden border-charcoal block sm:hidden relative' style={{width:`360px`, height:`725px`}}>
               <FaArrowCircleLeft 
                 size={40} 
+                color={"#000000"}
                 className={`${!translate ? "hidden":"block"} absolute z-10 top-1/2 left-0 cursor-pointer hover:opacity-100 opacity-70 transition-opacity duration-200`} 
                 onClick={()=> setTranslate(false)} 
               />
               <FaArrowCircleRight 
                 size={40} 
+                color={"#000000"}
                 className={`${!translate ? "block":"hidden"} 
                 absolute z-10 top-1/2 right-0 cursor-pointer hover:opacity-100 opacity-70 transition-opacity duration-200`} 
                 onClick={()=> setTranslate(true)}
