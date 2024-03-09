@@ -18,10 +18,23 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #f4f4f6;
+}
+body::-webkit-scrollbar {
+  width: 7.5px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 5px;
+}
+body::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 20px;
+}
+
+.tooltip-top {
+  clip-path: polygon(50% 0, 0 20%, 100% 20%);
+  width: 50px;
+  height: 75px;
+  position:absolute;
 }
