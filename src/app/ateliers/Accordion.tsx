@@ -1,5 +1,4 @@
 import { accordion } from '@/animations/accordion'
-import { inter } from '@/fonts/inter'
 import { oswald } from '@/fonts/oswald'
 import { oxygen } from '@/fonts/oxygen'
 import { motion } from 'framer-motion'
@@ -19,7 +18,7 @@ const Accodion: FC<AccordionProps> = ({halfWidth, children, question, setSelecte
   
   return (
     <>
-      <div className='flex justify-between items-center bg-charcoal px-5 py-2.5 rounded-md'>
+      <div className='flex justify-between items-center bg-charcoal px-5 py-2.5 rounded-md' onClick={()=> setSelected(prev=> prev === place ? "": place)} >
         <h3 className={`${oxygen.className} text-anti-flash-white font-bold text-xl`}><em>{question}</em></h3>
         <RxCross2 
           aria-controls='Afficher ou masquer la réponse' 
