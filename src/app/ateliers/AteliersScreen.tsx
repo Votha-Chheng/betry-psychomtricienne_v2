@@ -64,14 +64,14 @@ const AteliersScreen: FC = () => {
               <FaArrowCircleLeft 
                 size={40} 
                 color={"#000000"}
-                className={`${!translate ? "hidden":"block"} absolute z-10 top-1/2 left-0 cursor-pointer hover:opacity-100 opacity-70 transition-opacity duration-200`} 
+                className={`${!translate ? "hidden":"block"} absolute z-10 top-1/2 left-0 cursor-pointer hover:opacity-100 opacity-00 transition-opacity duration-200`} 
                 onClick={()=> setTranslate(false)} 
               />
               <FaArrowCircleRight 
                 size={40} 
                 color={"#000000"}
                 className={`${!translate ? "block":"hidden"} 
-                absolute z-10 top-1/2 right-0 cursor-pointer hover:opacity-100 opacity-70 transition-opacity duration-200`} 
+                absolute z-10 top-1/2 right-0 cursor-pointer hover:opacity-100 opacity-50 transition-opacity duration-200`} 
                 onClick={()=> setTranslate(true)}
               />
               <div style={{width:`720px`, height:`725px`}} className={`${translate ? "-translate-x-1/2":"translate-x-0"} absolute transition-transform duration-200`}>
