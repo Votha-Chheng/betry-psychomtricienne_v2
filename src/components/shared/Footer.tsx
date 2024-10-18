@@ -64,11 +64,11 @@ const Footer: FC<FooterProps> = ({setFooterView, bgColor}) => {
             </li>
             <li className='flex gap-2 sm:gap-5 py-2.5 sm:py-5 items-center'>
               <GiRotaryPhone  size={isSmallDevice ? 20:40} color='#745869' className='min-w-[50px]'/>
-              <Link href="/" className={oxygen.className + " tracking-wide text-sm lg:text-xl font-bold"}>06 44 85 18 00</Link>  
+              <Link href="tel:+33644851800" className={oxygen.className + " tracking-wide text-sm lg:text-xl font-bold"}>06 44 85 18 00</Link>  
             </li>
             <li className='flex gap-2 sm:gap-5  py-2.5 sm:py-5 items-center'>
               <MdAlternateEmail  size={isSmallDevice ? 20:40} color='#745869' className='min-w-[50px]'/>
-              <Link href="/" className={oxygen.className + " tracking-wide text-sm lg:text-xl font-bold"}>Me contacter par e-mail</Link>  
+              <Link href="mailto:betry.estelle@gmail.com" className={oxygen.className + " tracking-wide text-sm lg:text-xl font-bold"}>Me contacter par e-mail : betry.estelle@gmail.com</Link>  
             </li>
             <li className='flex gap-2 sm:gap-5 py-2.5 sm:py-5 items-center'>
               <FaWheelchair  size={isSmallDevice ? 20:40} color='#745869' className='min-w-[50px]'/>

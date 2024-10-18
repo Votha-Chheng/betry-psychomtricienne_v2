@@ -27,7 +27,7 @@ const WordTag: FC<WordTagProps> = ({word, index}) => {
     if(height){
       isSmallDevice ? setScreenHeight(height) : setScreenHeight(height/2)
     }
-  }, [height])
+  }, [height, isSmallDevice])
 
   const getPercentage = (scrollY: number, positionY: number, left : boolean)=> {
     let scrolledElement = scrollY-(positionY)
@@ -47,7 +47,7 @@ const WordTag: FC<WordTagProps> = ({word, index}) => {
 
   const translation = useMemo(()=> {
     return getPercentage(Y, positionY, index%2 === 0 ? true: false )
-  }, [positionY, Y, index])
+  }, [positionY, Y, index, getPercentage])
   
   return (
     <div  

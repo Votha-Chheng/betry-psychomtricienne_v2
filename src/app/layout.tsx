@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://betry-psychomotricienne.fr'),
   icons: {
     icon: "/images/logopsy_1.png",
-    },
+  },
   description: "Estelle Bétry - Psychomotricienne sur Mouriès, Arles, Saint-Martin de Crau et les Alpilles - Spécialisée dans le TDA/H",
   openGraph: {
     title: "Estelle Bétry - Psychomotricienne",
