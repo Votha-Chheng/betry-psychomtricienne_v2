@@ -27,7 +27,7 @@ const Specificities: FC<SpecificitiesProps> = ({setFourthInView, bgColor}) => {
           letterColor="#9f7f92"
           bottomInView={100}
         />
-        <InView triggerOnce={true} onChange={(inView, entry)=> setSectionInView(inView)} threshold={0.5} className='overflow-y-hidden'>
+        <InView triggerOnce={true} onChange={(inView, entry)=> setSectionInView(inView)} threshold={0.2} className='overflow-y-hidden'>
           <article className="flex md:flex-row flex-col-reverse justify-center mt-32 gap-7 items-center">
             <motion.div 
               variants={appearFromLeft} 
