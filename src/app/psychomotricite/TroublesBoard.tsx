@@ -23,8 +23,6 @@ const TroublesBoard: FC<TroublesBoardProps> = ({height, articleBottom, footerInV
   const boardRef = useRef<HTMLDivElement>(null)
   
   const Y = useScrollY()
-  const windowSize = useWindowSize()
-  const mdScreen = useMediaQuery("only screen and (max-height : 890px) or only screen and (max-width : 1480px)")
 
   useEffect(()=> {
     if(boardRef.current){

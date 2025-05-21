@@ -1,7 +1,8 @@
 import { appearFromBottom, appearFromLeft, appearFromRight } from '@/animations/appearFromSides'
 import HomeTitle from '@/components/shared/HomeTitle'
 import SectionLayout from '@/components/shared/SectionLayout'
-import Tooltip from '@/components/shared/Tooltip'
+//import Tooltip from '@/components/shared/Tooltip'
+import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip } from '@/components/ui/tooltip'
 import { marckScript } from '@/fonts/marckScript'
 import { oswald } from '@/fonts/oswald'
 import { motion } from 'framer-motion'
@@ -69,24 +70,14 @@ const Definition: FC<DefinitionProps> = ({bgColor}) => {
             , la 
             <span className='font-bold'>&nbsp;gestion des émo&shy;tions</span> 
             &nbsp;et aux&nbsp; 
-            <span 
-              style={{whiteSpace:"break-spaces"}}
-              ref={motRef}
-              className="font-bold underline-offset-4 underline decoration-dashed cursor-help " 
-              onMouseEnter={()=> setDisplayTooltip(true)}
-              onMouseLeave={()=> setDisplayTooltip(false)}
-            >
-              fonctions exécutives
-              <Tooltip 
-                top={tooltipTop + wordY + 10}
-                left={wordX-15}
-                displayTooltip={displayTooltip}
-                bgColor="bg-charcoal"
-                textColor="text-anti-flash-white"
-                width={200} 
-                text="Habiletés cog&shy;ni&shy;tives qui per&shy;met&shy;tent d'exé&shy;cu&shy;ter des tâches en con&shy;trô&shy;lant son com&shy;por&shy;te&shy;ment, par op&shy;po&shy;sition à au&shy;to&shy;ma&shy;tisme."
-              />
-            </span> 
+            <TooltipProvider delayDuration={250}>
+              <Tooltip>
+                <TooltipTrigger className='underline decoration-dotted cursor-help'>fonctions exécutives</TooltipTrigger>
+                <TooltipContent className='bg-charcoal ml-0 max-w-lg indent-0 text-center'>
+                  <p className='text-anti-flash-white'>Habiletés cog&shy;ni&shy;tives qui per&shy;met&shy;tent d'exé&shy;cu&shy;ter des tâches en con&shy;trô&shy;lant son com&shy;por&shy;te&shy;ment, par op&shy;po&shy;sition à au&shy;to&shy;ma&shy;tisme.</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
             <span className='font-bold'>&nbsp;pour mi&shy;eux com&shy;pren&shy;dre l’in&shy;di&shy;vi&shy;du</span>.
         </motion.p>
         <InView onChange={(inView, entry)=> setImageInView(inView)} triggerOnce={true} />

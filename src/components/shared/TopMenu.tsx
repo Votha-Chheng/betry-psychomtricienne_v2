@@ -48,10 +48,15 @@ const TopMenu: FC<TopMenuProps> = ({bgColor}) => {
             {
               isLargeDevice 
               ?
-              <Link href="/">Estelle Bétry</Link>
+              <Link className='flex gap-2 items-center' href="/"> 
+                <div className='w-[40px] h-[40px] relative rounded-full overflow-hidden border-white border-2'>
+                  <Image alt="portrait de Estelle Bétry, psychomotricienne" src="/images/portrait-2.jpg" fill style={{objectFit: 'cover'}}/>
+                </div> 
+                Estelle Bétry
+              </Link>
               :
-              <div className='w-[50px] h-[50px] relative rounded-full overflow-hidden'>
-                <Link href="/"><Image alt="portrait de Estelle Bétry, psychomotricienne" src="https://zupimages.net/up/24/10/hdau.jpg" fill style={{objectFit: 'cover'}}/></Link>
+              <div className='w-[50px] h-[50px] relative rounded-full overflow-hidden border-white border-2'>
+                <Link href="/"><Image alt="portrait de Estelle Bétry, psychomotricienne" src="/images/portrait-2.jpg" fill style={{objectFit: 'cover'}}/></Link>
               </div>
             }
             

@@ -83,7 +83,7 @@ const Relaxation: FC<RelaxationProps> = ({setRelaxation}) => {
           <motion.div variants={appearFromLeft}>
             <Accordion halfWidth={halfWidth} question="Qui anime l'atelier ?" setSelected={setSelected} selected={selected} place="4">
               <p className='py-2.5 px-5 indent-5 text-justify leading-8'>
-                L&apos;atelier est pro&shy;po&shy;sé par moi-même, Estelle Bétry, psy&shy;cho&shy;mo&shy;tri&shy;cien&shy;ne D.E. For&shy;mée à dif&shy;fé&shy;ren&shy;tes tech&shy;ni&shy;ques de re&shy;la&shy;xa&shy;tion, à la gestion de l’anxiété.<br/>
+                L&apos;atelier est pro&shy;po&shy;sé par moi-même, Estelle Bétry, psy&shy;cho&shy;mo&shy;tri&shy;cien&shy;ne D.E. for&shy;mée à dif&shy;fé&shy;ren&shy;tes tech&shy;ni&shy;ques de re&shy;la&shy;xa&shy;tion, à la gestion de l’anxiété.<br/>
               </p>
               <Link href={{ pathname: "/", hash: "qui-suis-je"}} className='font-bold flex hover:text-yellow-600 px-5 py-2.5 gap-3 items-center'>Voir ma présentation <FaArrowCircleRight/></Link>
             </Accordion>

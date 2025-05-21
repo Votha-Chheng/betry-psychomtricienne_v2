@@ -18,13 +18,15 @@ const Accodion: FC<AccordionProps> = ({halfWidth, children, question, setSelecte
   
   return (
     <>
-      <div className='flex justify-between items-center bg-charcoal px-5 py-2.5 rounded-md' onClick={()=> setSelected(prev=> prev === place ? "": place)} >
-        <h3 className={`${oxygen.className} text-anti-flash-white font-bold text-xl`}><em>{question}</em></h3>
+      <div className='flex justify-between items-center bg-charcoal px-5 py-2.5 rounded-md'>
+        <h3 onClick={()=> setSelected(prev=> prev === place ? "": place)} className={`${oxygen.className} cursor-pointer text-anti-flash-white font-bold text-xl`}><em>{question}</em></h3>
         <RxCross2 
           aria-controls='Afficher ou masquer la réponse' 
           color="#f4f4f6" 
           size={40} 
-          className={`${selected === place  ? "rotate-0":"-rotate-45"} transition-transform duration-200 cursor-pointer hover:text-yellow-600`} onClick={()=> setSelected(prev=> prev === place ? "": place)} />
+          className={`${selected === place  ? "rotate-0":"-rotate-45"} transition-transform duration-200 cursor-pointer hover:text-yellow-600`} 
+          onClick={()=> setSelected(prev=> prev === place ? "": place)} 
+        />
       </div>
       <motion.div 
         variants={accordion} initial="hidden" animate={selected === place ? "show":"hidden"}

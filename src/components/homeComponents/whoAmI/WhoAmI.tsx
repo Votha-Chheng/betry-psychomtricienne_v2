@@ -18,7 +18,7 @@ type WhoAmIProps = {
 const WhoAmI: FC<WhoAmIProps> = ({setThirdInView, bgColor, setQuiSuisJe}) => {
   const [sectionView, setSectionView] = useState<boolean>(false)
   
-  const quiSuisJeRef = useRef<HTMLDivElement>(null)
+  const quiSuisJeRef = useRef<HTMLImageElement>(null)
 
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)")
   
@@ -35,7 +35,7 @@ const WhoAmI: FC<WhoAmIProps> = ({setThirdInView, bgColor, setQuiSuisJe}) => {
           setThirdInView(inView)
         }}
       >
-        <article ref={quiSuisJeRef} className='p-2 sm:px-8 xl:px-44 overflow-hidden'>
+        <article className='p-2 sm:px-8 xl:px-44 overflow-hidden'>
           <HomeTitle title='Qui suis-je ?' letterColor='white' lineColor='bg-mountbatten-pink' bottomInView={50} />
           <InView triggerOnce={true} onChange={(inView, entry)=> setSectionView(inView)} threshold={isSmallDevice ? 0.25 : 0.5} className='flex flex-col sm:block items-center'>
             <motion.div 
@@ -45,7 +45,8 @@ const WhoAmI: FC<WhoAmIProps> = ({setThirdInView, bgColor, setQuiSuisJe}) => {
               style={{position:"relative", float:"left"}} 
               className='overflow-hidden w-36 h-36 border-4 rounded-full border-mountbatten-pink mt-20 mr-5'
             >
-              <Image alt="portrait de Estelle Bétry, psychomotricienne" src="/images/IMG_20210422_0017.jpg" style={{objectFit:"cover"}} fill/> 
+              {/* <Image ref={quiSuisJeRef} alt="portrait de Estelle Bétry, psychomotricienne" src="/images/IMG_20210422_0017.jpg" style={{objectFit:"cover"}} fill />  */}
+              <Image ref={quiSuisJeRef} alt="portrait de Estelle Bétry, psychomotricienne" src="/images/portrait-3.jpg" style={{objectFit:"cover"}} fill /> 
             </motion.div>  
             <motion.div  
               variants={appearFromBottom} 
