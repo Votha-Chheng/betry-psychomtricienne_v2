@@ -74,7 +74,7 @@ const Definition: FC<DefinitionProps> = ({bgColor}) => {
               <Tooltip>
                 <TooltipTrigger className='underline decoration-dotted cursor-help'>fonctions exécutives</TooltipTrigger>
                 <TooltipContent className='bg-charcoal ml-0 max-w-lg indent-0 text-center'>
-                  <p className='text-anti-flash-white'>Habiletés cog&shy;ni&shy;tives qui per&shy;met&shy;tent d'exé&shy;cu&shy;ter des tâches en con&shy;trô&shy;lant son com&shy;por&shy;te&shy;ment, par op&shy;po&shy;sition à au&shy;to&shy;ma&shy;tisme.</p>
+                  <p className='text-anti-flash-white'>Habiletés cog&shy;ni&shy;tives qui per&shy;met&shy;tent d&apos;exé&shy;cu&shy;ter des tâches en con&shy;trô&shy;lant son com&shy;por&shy;te&shy;ment, par op&shy;po&shy;sition à au&shy;to&shy;ma&shy;tisme.</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
