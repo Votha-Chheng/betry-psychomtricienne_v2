@@ -50,13 +50,13 @@ const TopMenu: FC<TopMenuProps> = ({bgColor}) => {
               ?
               <Link className='flex gap-2 items-center' href="/"> 
                 <div className='w-[40px] h-[40px] relative rounded-full overflow-hidden border-white border-2'>
-                  <Image alt="portrait de Estelle Bétry, psychomotricienne" src="/images/portrait-2.jpg" fill style={{objectFit: 'cover'}}/>
+                  <Image alt="portrait de Estelle Bétry, psychomotricienne" src="https://res.cloudinary.com/danelectrocloudname/image/upload/v1747828218/portrait-2_hrwnmd.jpg" fill style={{objectFit: 'cover'}}/>
                 </div> 
                 Estelle Bétry
               </Link>
               :
               <div className='w-[50px] h-[50px] relative rounded-full overflow-hidden border-white border-2'>
-                <Link href="/"><Image alt="portrait de Estelle Bétry, psychomotricienne" src="/images/portrait-2.jpg" fill style={{objectFit: 'cover'}}/></Link>
+                <Link href="/"><Image alt="portrait de Estelle Bétry, psychomotricienne" src="https://res.cloudinary.com/danelectrocloudname/image/upload/v1747828218/portrait-2_hrwnmd.jpg" fill style={{objectFit: 'cover'}}/></Link>
               </div>
             }
             

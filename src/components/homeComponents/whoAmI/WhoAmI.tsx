@@ -46,7 +46,13 @@ const WhoAmI: FC<WhoAmIProps> = ({setThirdInView, bgColor, setQuiSuisJe}) => {
               className='overflow-hidden w-36 h-36 border-4 rounded-full border-mountbatten-pink mt-20 mr-5'
             >
               {/* <Image ref={quiSuisJeRef} alt="portrait de Estelle Bétry, psychomotricienne" src="/images/IMG_20210422_0017.jpg" style={{objectFit:"cover"}} fill />  */}
-              <Image ref={quiSuisJeRef} alt="portrait de Estelle Bétry, psychomotricienne" src="/images/portrait-3.jpg" style={{objectFit:"cover"}} fill /> 
+              <Image 
+                ref={quiSuisJeRef} 
+                alt="portrait de Estelle Bétry, psychomotricienne" 
+                src="https://res.cloudinary.com/danelectrocloudname/image/upload/v1747828229/portrait-3_mbhhqt.jpg" 
+                style={{objectFit:"cover"}} 
+                fill 
+              /> 
             </motion.div>  
             <motion.div  
               variants={appearFromBottom} 
