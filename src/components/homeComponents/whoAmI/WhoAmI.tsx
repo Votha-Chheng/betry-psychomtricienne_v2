@@ -49,7 +49,8 @@ const WhoAmI: FC<WhoAmIProps> = ({setThirdInView, bgColor, setQuiSuisJe}) => {
               <Image 
                 ref={quiSuisJeRef} 
                 alt="portrait de Estelle Bétry, psychomotricienne" 
-                src="https://res.cloudinary.com/danelectrocloudname/image/upload/v1747828229/portrait-3_mbhhqt.jpg" 
+                //src="https://res.cloudinary.com/danelectrocloudname/image/upload/v1747828229/portrait-3_mbhhqt.jpg" 
+                src="https://res.cloudinary.com/danelectrocloudname/image/upload/v1783024392/10editsize_zanjic.jpg" 
                 style={{objectFit:"cover"}} 
                 fill 
               /> 
